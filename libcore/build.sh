@@ -12,6 +12,7 @@ TAGS=(
     "with_utls"
     "with_clash_api"
     "with_ech"
+    "with_shadowsocksr"
 )
 
 BUILD_TAGS="${TAGS[*]}"
