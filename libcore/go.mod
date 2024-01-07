@@ -98,3 +98,5 @@ replace github.com/xchacha20-poly1305/dun => ../dun
 replace github.com/sagernet/sing-box => ../dun/sing-box
 
 replace github.com/sagernet/sing-quic => ../dun/sing-quic
+
+// replace github.com/sagernet/sing => ../../sing
