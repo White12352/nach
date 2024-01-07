@@ -19,13 +19,13 @@ jobs:
         run: find buildScript libcore/*.sh | xargs cat | sha1sum > golang_status
       - name: Libcore Status
         run: git ls-files libcore | xargs cat | sha1sum > libcore_status
-      #- name: LibCore Cache
-        #id: cache
-        #uses: actions/cache@v3
-        #with:
-          #path: |
-            #app/libs/libcore.aar
-          #key: ${{ hashFiles('.github/workflows/*', 'golang_status', 'libcore_status') }}
+      - name: LibCore Cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            app/libs/libcore.aar
+          key: ${{ hashFiles('.github/workflows/*', 'golang_status', 'libcore_status') }}
       - name: Install Golang
         #if: steps.cache.outputs.cache-hit != 'true'
         uses: actions/setup-go@v5
